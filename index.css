@@ -1,5 +1,9 @@
-.user {
+/* .user {
   background-color: lightgray;
   padding: 1rem;
   margin-bottom: 1rem;
+} */
+
+#container {
+  margin: 3rem;
 }
