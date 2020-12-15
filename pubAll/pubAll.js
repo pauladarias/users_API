@@ -8,6 +8,7 @@ fetch(url)
   .then(response => response.json())
   .then (data => {
     pubsAll.innerHTML = `
+
     <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
       <img style="margin-top: 1rem; border-radius: 5px" src="./pub_profile_pic.jpg" class="card-img-top" alt="...">
       <div class="card-body">
@@ -139,11 +140,104 @@ fetch(url)
             Take Away
           </label>
         </div>
-        <a href="#" class="card-link">Edit</a>
+   
+
+        <h5 style="margin-top: .5rem">${data.pub.landlord}'s Amenities and Facilities</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Pool Table
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Dart Board
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Beer Garden
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Outdoor Seating
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Disabled Access
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Parking
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Near Public Transport
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Outdoors Heaters
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="food" checked>
+          <label class="form-check-label" for="food">
+            Function Room
+          </label>
+        </div>
+        <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="food" checked>
+        <label class="form-check-label" for="food">
+          Open Fire
+        </label>
+      </div>
+        
+        <div style="margin-top: 1rem">
+          <a href="#" class="card-link">Edit</a>
+        </div>
+
       </div> 
+    </div>
+
+    <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
+      <div class="card-body">
+      <h4 style="margin-top: .5rem">${data.pub.landlord}'s Opening Hours</h4>
+      <p style="margin-top: 1rem"><strong>Monday:</strong> ${data.openingHours.monday[0].open} - ${data.openingHours.monday[0].closed} - ${data.openingHours.monday[1].open} ${data.openingHours.monday[1].closed}</p>
+      <p><strong>Tuesday:</strong> ${data.openingHours.tuesday[0].open} - ${data.openingHours.tuesday[0].closed} - ${data.openingHours.tuesday[1].open} ${data.openingHours.tuesday[1].closed}</p>
+      <p><strong>Wednesday:</strong> ${data.openingHours.wednesday[0].open} - ${data.openingHours.wednesday[0].closed} - ${data.openingHours.wednesday[1].open} ${data.openingHours.wednesday[1].closed}</p>
+      <p><strong>Thursday:</strong> ${data.openingHours.thursday[0].open} - ${data.openingHours.thursday[0].closed} - ${data.openingHours.thursday[1].open} ${data.openingHours.thursday[1].closed}</p>
+      <p><strong>Friday:</strong> ${data.openingHours.friday[0].open} - ${data.openingHours.friday[0].closed} - ${data.openingHours.friday[1].open} ${data.openingHours.friday[1].closed}</p>
+      <p><strong>Saturday:</strong> ${data.openingHours.saturday[0].open} - ${data.openingHours.saturday[0].closed} </p>
+      <p><strong>Sunday:</strong> ${data.openingHours.sunday[0].open} - ${data.openingHours.sunday[0].closed} </p>
+      </div>
+    </div>
+
+    <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
+      <div class="card-body">
+      <h4 style="margin-top: .5rem">${data.pub.landlord}'s Reviews</h4>
+      <p style="margin-top: 1rem"><em>"${data.commentry[0].text}"</em></p>
+      <p style="text-align: center">Rating: ${data.commentry[0].rate} - Pricing: ${data.commentry[0].price}</p>
+      <hr>
+      <p><em>"${data.commentry[1].text}"</em></p>
+      <p style="text-align: center">Rating: ${data.commentry[1].rate} - Pricing: ${data.commentry[1].price}</p>
+
+      </div>
     </div>
 
 
     `
-    console.log(data.categories)
+    console.log(data.openingHours)
   })
+
