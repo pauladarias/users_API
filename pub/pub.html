@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Pub</title>
+</head>
+<body>
+  <div id="container">
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <h3>Add New Pub</h3>
+        <form class="add-pub-form">
+          <div class="form-group">
+            <label for="pub-name">Pub Name</label>
+            <input type="text" class="form-control" id="pub-name-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-group">Group</label>
+            <input type="text" class="form-control" id="pub-group-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-description">Description</label>
+            <input type="text" class="form-control" id="pub-description-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-county">County</label>
+            <input type="text" class="form-control" id="pub-county-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-email">Email</label>
+            <input type="text" class="form-control" id="pub-email-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-phone">Phone</label>
+            <input type="text" class="form-control" id="pub-phone-value">
+          </div>
+          <div class="form-group">
+            <label for="pub-photo">Photo</label>
+            <input type="text" class="form-control" id="pub-photo-value">
+          </div>
+          <button type="submit" class="btn btn-primary">Add Pub</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="pubs-list row">
+      <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
+        <img style="margin-top: 1rem; border-radius: 5px" src="./pub_profile_pic.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Edit</a>
+          <a href="#" class="card-link">Delete</a>
+        </div>
+      </div>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="pub.js"></script>
+</body>
+</html>

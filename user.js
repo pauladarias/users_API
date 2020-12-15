@@ -146,7 +146,7 @@ fetch(url)
     })
   })
 
-  // POST METHOD ADD USER _ NOT WORKING -----------
+  // POST METHOD ADD USER - input value - NOT WORKING -----------
 
   // addUserForm.addEventListener("submit", (e) => {
   //   e.preventDefault();
