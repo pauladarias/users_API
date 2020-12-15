@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <title>Pub Info</title>
+</head>
+<body>
+  <div id="container">
+    <h1>Pub Info</h1>
+    <div class="pub-all row">
+      <!-- <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
+        <img style="margin-top: 1rem; border-radius: 5px" src="./pub_profile_pic.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-pub-name">Card title</h5>
+          <h6 class="card-pub-group mb-2 text-muted">Card subtitle</h6>
+          <p class="card-pub-description">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-pub-address">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <p class="card-pub-county">${data.pub.county_province}</p>
+          <p class="card-pub-zipcode">${data.pub.zip_or_postcode}</p>
+          <p class="card-pub-country">${data.pub.country}</p>
+          <p class="card-pub-email">${data.pub.email}</p>
+          <p class="card-pub-phone">${data.pub.phone}</p>
+          <p class="card-pub-coordinate">${data.pub.coordinate.x} // ${data.pub.coordinate.y}</p>
+          <p class="card-pub-photo">${data.pub.imageUrl}</p>
+          <p class="card-pub-date">${data.pub.timestamp}</p>
+          <a href="#" class="card-link">Edit</a>
+          <a href="#" class="card-link">Delete</a>
+        </div>
+      </div> -->
+      <form action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+        <label for="vehicle1"> I have a bike</label><br>
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+        <label for="vehicle2"> I have a car</label><br>
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+        <label for="vehicle3"> I have a boat</label><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      </div>
+      
+    </div>
+  </div>
+
+  <script src="pubAll.js"></script>
+</body>
+</html>
