@@ -238,6 +238,35 @@ fetch(url)
 
 
     `
+
  
   })
+
+  function addPub() {
+    fetch("http://35.178.207.61:8080/pubmate/api/0.1/pub/1", {
+      method: "POST", 
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify({
+        id: 1,
+        landlord: "Museum Tavern",
+        group: "ales and more",
+        description: "The local pub"
+
+      })
+    })
+    .then(response => {
+      console.log(response)
+      if (!response.ok) {
+        throw Error("ERROR")
+      }
+      return response.text()
+    }).then(text => {
+      console.log(text)
+        
+    })
+  }
+  
+  addPub();
 
