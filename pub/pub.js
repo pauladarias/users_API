@@ -9,7 +9,6 @@ const url = "http://35.178.207.61:8080/pubmate/api/0.1/pub/1"
 fetch(url)
   .then(response => response.json())
   .then(data => {
-    console.log(data.categories.food)
     pubsList.innerHTML = `
     <div class="card mt-4 col-md-6 bg-light" style="width: 18rem;">
     <img style="margin-top: 1rem; border-radius: 5px" src="./pub_profile_pic.jpg" class="card-img-top" alt="...">
@@ -26,5 +25,5 @@ fetch(url)
     </div>
   </div>
     `
-console.log(data.categories.food)
+
   })
