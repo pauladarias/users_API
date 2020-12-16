@@ -1,7 +1,11 @@
 const pubsList = document.querySelector(".pubs-list");
 const addPubForm = document.querySelector(".add-pub-form");
 const pubNameValue = document.getElementById("pub-name-value");
+const pubGroupValue = document.getElementById("pub-group-value");
+const pubDescriptionValue = document.getElementById("pub-description-value");
+const pubCountyValue = document.getElementById("pub-county-value");
 const pubEmailValue = document.getElementById("pub-email-value");
+const pubPhoneValue = document.getElementById("pub-phone-value");
 const btnSubmit = document.querySelector(".btn")
 
 const url = "http://35.178.207.61:8080/pubmate/api/0.1/pub/1"
@@ -44,10 +48,18 @@ fetch(url)
         if(editButtonIsPressed) {
           const parent = e.target.parentElement;
           let pubNameContent = parent.querySelector(".card-pub-name").textContent
+          let pubGroupContent = parent.querySelector(".card-pub-group").textContent
+          let pubDescriptionContent = parent.querySelector(".card-pub-description").textContent
+          let pubCountyContent = parent.querySelector(".card-pub-county").textContent
           let pubEmailContent = parent.querySelector(".card-pub-email").textContent
+          let pubPhoneContent = parent.querySelector(".card-pub-phone").textContent
   
           pubNameValue.value = pubNameContent;
+          pubGroupContent.value = pubGroupContent;
+          pubDescriptionContent.value = pubDescriptionContent;
+          pubCountyContent.value = pubCountyContent;
           pubEmailValue.value = pubEmailContent;
+          pubPhoneContent.value = pubPhoneContent;
         }
   
         // UPDATE THE EXISTING USER
@@ -58,8 +70,9 @@ fetch(url)
              "Content-Type": "application/json"
            },
            body: JSON.stringify({
-             pubname: usernameValue.value,
-             pubemail: emailValue.value
+             pubname: pubNameValue.value,
+             pubgroup: pubGroupValue.value,
+             pubemail: pubEmailValue.value
            })
            .then(res => res.json())
            .then(() => location.reload)
