@@ -33,26 +33,41 @@ fetch(url)
   .then(response => response.json())
   .then(data => renderUsers(data))
 
-// DELETE REQUEST
 
-// friendsList.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   let acceptButtonIsPressed = e.target.id == "accept-user"
-//   let declineButtonIsPressed = e.target.id == "decline-user"
-
-//   console.log("Accepted!!!")
-// })
-
-// POST - ADD friends
+// PUT and DELETE REQUEST
 
 
-acceptFriend.addEventListener("submit", (e) => {
+
+friendsList.addEventListener("click", (e) => {
   e.preventDefault();
-  console.log("Friend submited")
+
+  console.log("Accepted!!!")
+  let acceptButtonIsPressed = e.target.id == "accept-user"
+  let declineButtonIsPressed = e.target.id == "decline-user"
+
+  let id = (e.target.parentElement.dataset.id)
+
+  // DELETE
+
+  if(declineButtonIsPressed) {
+    fetch("http://35.178.207.61:8080/pubmate/api/0.1/friend_management/2/request/" + `${id}`, {
+      method: "DELETE",
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+    })
+  }
+
+  // PUT 
+  if(acceptButtonIsPressed) {
+    const parent = e.target.parentElement;
+    let userName
+  }
+
 })
 
-
-
+// POST - ADD friends
 
 
 function AddFriend() {
@@ -79,4 +94,4 @@ function AddFriend() {
   })
 }
 
-requestUser();
+AddFriend();

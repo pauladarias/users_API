@@ -25,9 +25,10 @@ fetch(url)
       <p class="card-pub-phone">${data.phone}</p>
       <a href="#" class="card-link" id="edit-pub">Edit</a>
       <a href="#" class="card-link" id="delete-pub">Delete</a>
-      <a href="../pubAll/pubAll.html" class="card-link">Pub Info</a>
+
     </div>
   </div>
+  <a href="../pubAll/pubAll.html">Pub Info</a>
     `
     pubsList.addEventListener("click", (e) =>{
       e.preventDefault();

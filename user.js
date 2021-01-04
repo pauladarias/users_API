@@ -101,7 +101,7 @@ fetch(url)
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
           <a href="#" class="card-link" id="edit-user">Edit</a>
           <a href="#" class="card-link" id="delete-user">Delete</a>
-          <a href="../userFriends/userFriends.html" class="card-link">Friends</a>
+          <a href="http://127.0.0.1:5500/userFriends/userFriends.html" class="card-link">Friends</a>
 
         </div>
      </div>
